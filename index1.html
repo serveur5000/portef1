@@ -1,0 +1,41 @@
+<html lang="fr">
+<head>
+    <title>Reservation</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <form action="session.php" method="post">
+        Nom:      <input type="text" name="nom" /><br />
+        Prénom:   <input type="text" name="prenom" required /><br />
+        Email:    <input type="email" name="email" pattern="[a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+.[a-zA-Z.]{2,15}" required/><br />
+        Tel:(229) <input type="tel" name="tel" pattern="\d{8}" required/><br />
+        <br /> 
+        <label style="color:#161616;">01 CHAMBRE SALON</label><br /> 
+        <input type="radio" name="chambre" value="a"  id="ssp"/><label style="background:#FF8C00;">S1</label> <input type="text" size="4" class="form-control" style="background:#FF8C00;" value="1CH1S" required readonly><br />
+        <input type="radio" name="chambre" value="b" id="ssp"/><label style="background:#21e40f;">S2</label> <input type="text" size="4" class="form-control" style="background:#21e40f;" value="1CH1S" required readonly><br />
+        <input type="radio" name="chambre" value="c" id="ssp"/><label style="background:#5aa0e0;">S3</label> <input type="text" size="4" class="form-control" style="background:#5aa0e0;" value="1CH1S" required readonly><br />
+        <br />     <label style="color:#161616;">02 CHAMBRES SALON</label><br /> 
+        <input type="radio" name="chambre" value="d" id="ssp"/><label style="background:#d1e048;">Y1</label> <input type="text" size="4" class="form-control" style="background:#d1e048;" value="2CH1S" required readonly><br />
+        <input type="radio" name="chambre" value="e" id="ssp"/><label style="background:#ece4e4;">Y2</label> <input type="text" size="4" class="form-control" style="background:#ece4e4;" value="2CH1S" required readonly><br />
+        <input type="radio" name="chambre" value="f" id="ssp"/><label style="background:#ee3f13;">Y3</label> <input type="text" size="4" class="form-control" style="background:#ee3f13;" value="2CH1S" required readonly><br />
+        <br /> 
+    Identifiant:   <input type="text" name="idr"  maxlength="3"   pattern="[a-zA-Z.]{3}"required /><br />
+</br>
+    <label for="start">Date d'entrée:</label>
+    <input type="date" id="start" name="date1" value="" min="2024-01-01" max="2025-12-31" required/>
+    <input type="time" id="start" name="time1" value=""  required/>
+    <br>
+    <label for="start">Date de sortie:</label>
+    <input type="date" id="end" name="date2" value="" min="2024-01-01" max="2025-12-31" required/>
+    <br>
+    <label for="start">Note: (Optionnel)</label>
+    <textarea id="start" name="note" rows="4" cols="30" placeholder="Laissez ici une petite note"></textarea>
+    <br>
+    <input type="checkbox" id="scales" name="scales"  required/>
+    <label for="scales">Je confirme avoir pris connaissance des conditions et clauses d'offre de service</label>
+<br>
+        <input type="submit" value="DEMARRER LE PROCESSUS" name="reserver"/>
+    </form>
+</body>
+</html>
